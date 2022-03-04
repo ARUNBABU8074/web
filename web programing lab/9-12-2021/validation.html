@@ -1,0 +1,61 @@
+<html>
+<head> 
+<title>Registration Form</title>
+</head>
+<body>
+<form>
+<label name="Fname">Fname:</label>
+<input type="text" name="Fname" id="f">
+<br><br>
+<label name="Lname">Lname:</label>
+<input type="text" name="Lname" id="l">
+<br><br>
+<label name="address">Address:</label>
+<textarea name="address" id="a"></textarea>
+<br><br>
+<label name="phone">phone:</label>
+<input type="number" name="phone" id="p">
+<br><br>
+<label name="email">Email:</label>
+<input type="text" name="email" id="e">
+<br><br>
+date of birth:<input type="date" name="dob">
+<br><br>
+course:<select><option value="bca">bca</option>
+<option value="bba">bba</option>
+<option value="mca">mca</option>
+<option value="btech">btech</option>
+<option value="mtech">mtech</option></select>
+<br><br>gender:<br>
+<input type="radio" name="gender" value="male" id="g">male
+<input type="radio" name="gender" value="female" id="g">Female
+<input type="radio" name="gender" value="other" id="g">other
+<br><br>
+
+</form>
+<script language="javascript" type="text/javascript">
+
+function myfunction(){
+if(document.getElementById('f').value=="")
+{
+alert("please provide a first name");
+}
+if(document.getElementById('l').value=="")
+alert("please provide a last name");
+if(document.getElementById('a').value=="")
+alert("please provide an address");
+var num=document.getElementById('p').value;
+n=num.length;
+if(n!=10)
+alert("please provide a valid mobile");
+var email=document.getElementById('e').value;
+var filter= /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
+if(!filter.test(email)){
+alert("please provide a valid email address");}
+}
+</script>
+<br>
+<button  OnClick="myfunction()">submit</button>
+
+</body>
+</html>

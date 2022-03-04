@@ -1,0 +1,37 @@
+<html>
+<head><title>objects</title></head>
+<body>
+<p id="demo"></p>
+<p id="funct"></p>
+<p id="loop"></p>
+<script language="javascript" type="text/javascript">
+var person={fname:"jhon",lname:"doe",age:50};
+document.getElementById("demo").innerHTML=
+person.fname+ " "+person.lname+" age is  <br>"+person.age;
+/* using object construct */
+function human(first,last,age,eye)
+{
+this.fname=first;
+this.lname=last;
+this.age=age;
+this.eyecolor=eye;
+}
+var boy=new human("roman","rings",45,"black");
+var girl=new human("lilly","martin",34,"blue");
+document.getElementById("funct").innerHTML=
+boy.fname+ " is brother of "+girl.fname;
+/* using loop */
+var txt=" ";
+var loop={fname:"micheal",lname:"jackson",age:45}
+var x;
+for(x in loop)
+{
+txt += loop[x]+" ";
+}
+document.getElementById("loop").innerHTML=txt;
+/* adding new function */
+person.nationality="indian";
+document.write(person.nationality);
+</script>
+</body>
+</html>

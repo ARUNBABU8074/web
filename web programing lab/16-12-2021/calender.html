@@ -1,0 +1,38 @@
+<html>
+<head><title>calender</title></head>
+<body>
+year : <input type="text" id="y"><br><br>
+month : <input type="text" id="m"><br><br>
+<button OnClick="myfunction()">get calender</button><br>
+
+<script language="javascript" type="text/javascript">
+function myfunction(){
+    var cal = "<table BORDER=1 id='calender'><tr><th>SUN</th><th>MON</th><th>TUE</th><th>WED</th><th>THU</th><th>FRI</th><th>SAT</th></tr><tr>"
+    var year = document.getElementById("y").value;
+    var month = document.getElementById("m").value;
+    month =month-1;
+    var date = new Date(year,month);
+    var day = date.getDay();
+	for (var i = 0; i < day; i++) {
+            cal = cal+"<td></td>";
+        }
+        while (date.getMonth() == month)
+        {
+            cal =cal+ "<td>" + date.getDate() + "</td>";
+            if (date.getDay() == 6) 
+            {
+                cal =cal+ "</tr><tr>";
+            }
+            date.setDate(date.getDate() + 1);
+        } 
+	for (var i = day; i < 7; i++) {
+            cal = cal+"<td></td>";	
+     }
+        cal = cal+"</table>"
+        document.write(cal);
+		
+    }
+
+</script>
+</body>
+</html>

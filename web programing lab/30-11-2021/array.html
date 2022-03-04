@@ -1,0 +1,28 @@
+<html>
+<head>
+<title>array</title></head>
+<body>
+<p id="demo"></p>
+<h2 id="bike"></h2>
+<script language="javascript" type="text/javascript">
+var fruits=["apple","mango","orange"];
+document.getElementById("demo").innerHTML="array fruit : "+(fruits);
+/* using new keyword */
+var bike= new Array("bullet","ns","rs","fz");
+document.getElementById("bike").innerHTML="array bike = "+bike;
+document.write("length = ",bike.length);
+document.write("<br> <br> sort = ",bike.sort());
+bike.push("mt");
+bike[3]="himalayan";
+document.write("<br><br> adding 2 elements : ",bike);
+document.write("<br><br> string value : ",bike.toString());
+document.write("<br><br> join - in b/w elements : ",bike.join(" - "));
+document.write("<br><br> delete this element form bike using pop  : ",bike.pop());
+document.write("<br><br> affter pop : ",bike);
+document.write("<br><br> delete this element form bike using shift : ",bike.shift());
+document.write("<br><br> affter shift : ",bike);
+bike.splice(1,0,"R15");
+document.write("<br><br> affter splice : ",bike);
+</script>
+</body>
+</html>

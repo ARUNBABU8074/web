@@ -1,0 +1,26 @@
+<html>
+<head><tiltle> string functions</title></head>
+<body>
+<br>enter the strings :<input type="text" id="str">
+
+<script language="javascript" type="text/javascript">
+
+function myfunction(){
+var x=document.getElementById('str').value;
+document.write("length of ",x," =  ",x.length,"<br>");
+document.write("uppercase of ",x," =  ",x.toUpperCase(x),"<br>");
+document.write("lowercase of ",x," =  ",x.toLowerCase(x),"<br>");
+document.write("code of ",x," at positon 3=  ",x.charCodeAt(3),"<br>");
+document.write("charactor  of ",x," at postion 3 =  ",x.charAt(3),"<br>");
+document.write("trim of ",x," =  ",x.trim(x),"<br>");
+document.write("split of ",x," =  ",x.split(" "),"<br>");
+document.write("search p in ",x," =  ",x.search("p"),"<br>");
+document.write("slice of ",x,"from 6 - 2 =  ",x.slice(3,7),"<br>");
+document.write("substring of ",x,"from 2 - 6 =  ",x.substring(2,6),"<br>");
+document.write("substr of ",x,"from 2 upto its lenthg 5 =  ",x.substr(2,5),"<br>");
+}
+</script>
+<br>
+<button  OnClick="myfunction()">start</button>
+</body>
+</html>
